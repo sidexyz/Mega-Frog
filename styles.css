@@ -568,6 +568,10 @@ body {
   object-position: center top;
 }
 
+.gallery__image img.img--top-max {
+  object-position: center;
+}
+
 .gallery__item:hover .gallery__image img {
   transform: scale(1.05);
 }
