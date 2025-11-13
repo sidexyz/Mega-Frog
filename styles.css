@@ -1,30 +1,30 @@
-/* MANYU Design System - CSS Variables */
+/* Mega Frog Design System - CSS Variables */
 :root {
   /* Colors */
-  /* BSC-themed yellow palette */
-  --color-brand-primary: #f4c20d; /* bright BSC-like yellow */
-  --color-brand-primary-foreground: #1a1200;
-  --color-brand-secondary: #f1b000;
-  --color-brand-secondary-foreground: #1a1200;
-  --color-brand-accent: #ffe48a;
-  --color-brand-accent-foreground: #1a1200;
+  /* Frog-themed green palette */
+  --color-brand-primary: #22c55e; /* bright frog green */
+  --color-brand-primary-foreground: #052e16;
+  --color-brand-secondary: #16a34a;
+  --color-brand-secondary-foreground: #052e16;
+  --color-brand-accent: #4ade80;
+  --color-brand-accent-foreground: #052e16;
   
-  /* Neutral warm browns for contrast with yellow */
-  --color-neutral-100: #fff9e6;  /* warm near-white */
-  --color-neutral-200: #ffeab3;
-  --color-neutral-300: #ffd66b;
-  --color-neutral-400: #fabc3c;
-  --color-neutral-500: #e0a21f;
-  --color-neutral-600: #a77714;
-  --color-neutral-700: #5a430a;  /* cards/borders */
-  --color-neutral-800: #352807;  /* section bg */
-  --color-neutral-900: #1e1704;  /* page bg */
+  /* Neutral greens for contrast */
+  --color-neutral-100: #f0fdf4;  /* light green near-white */
+  --color-neutral-200: #dcfce7;
+  --color-neutral-300: #bbf7d0;
+  --color-neutral-400: #86efac;
+  --color-neutral-500: #4ade80;
+  --color-neutral-600: #22c55e;
+  --color-neutral-700: #15803d;  /* cards/borders */
+  --color-neutral-800: #166534;  /* section bg */
+  --color-neutral-900: #14532d;  /* page bg */
   
-  --color-plasma-glow: #f4c20d;
-  --color-plasma-energy: #f1b000;
-  --color-plasma-core: #d79b00;
-  --color-plasma-aura: rgba(244, 194, 13, 0.15);
-  --color-plasma-pulse: rgba(244, 194, 13, 0.25);
+  --color-plasma-glow: #22c55e;
+  --color-plasma-energy: #16a34a;
+  --color-plasma-core: #15803d;
+  --color-plasma-aura: rgba(34, 197, 94, 0.15);
+  --color-plasma-pulse: rgba(34, 197, 94, 0.25);
   
   /* Typography */
   --font-family-primary: Inter, system-ui, -apple-system, sans-serif;
@@ -77,8 +77,8 @@
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
-  --shadow-plasma: 0 20px 40px rgba(11, 212, 127, 0.15);
-  --shadow-glow: 0 0 20px rgba(11, 212, 127, 0.3);
+  --shadow-plasma: 0 20px 40px rgba(34, 197, 94, 0.15);
+  --shadow-glow: 0 0 20px rgba(34, 197, 94, 0.3);
   
   /* Animation */
   --animation-duration-fast: 0.15s;
@@ -105,8 +105,8 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--color-neutral-100);
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(244,194,13,0.06), transparent),
-              radial-gradient(900px 450px at 90% 10%, rgba(241,176,0,0.05), transparent),
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(34,197,94,0.06), transparent),
+              radial-gradient(900px 450px at 90% 10%, rgba(22,163,74,0.05), transparent),
               var(--color-neutral-900);
   overflow-x: hidden;
 }
@@ -124,7 +124,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(6, 26, 18, 0.95);
+  background: rgba(20, 83, 45, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-neutral-700);
 }
@@ -171,7 +171,7 @@ body {
 }
 
 .nav__link--primary {
-  background: linear-gradient(135deg, #ffd451, var(--color-brand-primary));
+  background: linear-gradient(135deg, #4ade80, var(--color-brand-primary));
   color: var(--color-brand-primary-foreground);
   padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: var(--border-radius-lg);
@@ -258,7 +258,7 @@ body {
   font-size: var(--font-size-6xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  background: linear-gradient(135deg, #fff6cf, #ffd451 40%, var(--color-brand-primary));
+  background: linear-gradient(135deg, #dcfce7, #4ade80 40%, var(--color-brand-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -321,7 +321,7 @@ body {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, #ffd451, var(--color-brand-primary));
+  background: linear-gradient(135deg, #4ade80, var(--color-brand-primary));
   color: var(--color-brand-primary-foreground);
   box-shadow: var(--shadow-plasma);
 }
@@ -375,6 +375,22 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.contract__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all var(--animation-duration-normal) var(--animation-easing-ease);
+}
+
+.contract__link:hover {
+  opacity: 0.9;
+}
+
+.contract__link:hover .contract__address {
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary);
+}
+
 .contract__label {
   font-size: var(--font-size-sm);
   color: var(--color-neutral-300);
@@ -398,6 +414,7 @@ body {
   border-radius: var(--border-radius-md);
   border: 1px solid var(--color-neutral-600);
   word-break: break-all;
+  transition: all var(--animation-duration-normal) var(--animation-easing-ease);
 }
 
 /* Sections */
@@ -548,7 +565,7 @@ body {
 }
 
 .gallery__image img.img--top {
-  object-position: center 30%;
+  object-position: center top;
 }
 
 .gallery__item:hover .gallery__image img {
